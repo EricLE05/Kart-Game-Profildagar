@@ -29,11 +29,9 @@ public class ProgressionBarExample : GameManager
         
         
         float progressAsDecimal = progressionValue/100f;
-        progressAsDecimal = TraveledLength % 1;
-        if (progressAsDecimal < 0)
-        {
-            progressAsDecimal = 0;
-        }
+        if (procent > 0)
+        progressAsDecimal = procent % 1;
+        
 
        float position = (backgroundBar.rect.width - currentProgression.rect.width ) * progressAsDecimal;
 
